@@ -1,0 +1,43 @@
+# === Java/Maven ===
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+*.log
+*.class
+
+# === IntelliJ IDEA ===
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# === OS Specific ===
+.DS_Store
+Thumbs.db
+
+# === Logs ===
+*.log
+hs_err_pid*.log
+
+# === Environment Files ===
+.env
+*.env
+*.key
+*.pem
+
+# === Eclipse (if applicable) ===
+.classpath
+.project
+.settings/
+
+# === Maven specific ===
+.mvn/timing.properties
+
+# === Backup files ===
+*~
+*.bak
+*.swp
+
+# === Built JARs/WARs ===
+*.jar
+*.war
