@@ -1,7 +1,7 @@
 package com.example.chatbot.controller;
 
 import com.example.chatbot.service.OpenAIService;
-import com.example.chatbot.utils.GroqParser;
+import com.example.chatbot.utils.ResponseParser;
 import com.example.chatbot.utils.MarkDownUtil;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
@@ -29,7 +29,7 @@ public class ChatController implements ErrorController {
     public String chat(@RequestParam("message") String message, Model model){
         String response =openAIService.askGPT(message);
 //        String html = response.replaceAll("\n", "<br>");
-        model.addAttribute("response", MarkDownUtil.renderMarkdownToHtml(GroqParser.extractAssistantMessage(response)));
+        model.addAttribute("response", MarkDownUtil.renderMarkdownToHtml(ResponseParser.extractAssistantMessage(response)));
         return "chat";
     }
 

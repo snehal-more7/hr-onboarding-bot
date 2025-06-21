@@ -3,7 +3,7 @@ package com.example.chatbot.utils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class GroqParser {
+public class ResponseParser {
     public static String extractAssistantMessage(String jsonResponse) {
         JSONObject obj = new JSONObject(jsonResponse);
         JSONArray choices = obj.getJSONArray("choices");
